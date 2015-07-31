@@ -1,65 +1,42 @@
 [
   {
     "name": "Netflix",
-    "front_backend": [
-      "nodejs",
-      "python",
-      "java"
-    ],
-    "js_view": "reactjs",
-    "js_mvc": "ember",
-    "js_view": "-",
-    "other": [
-      "d3",
-      "jquery ui"
-    ]
+    "front_backend_new": "node.js",
+    "front_backend_old": "java",
+    "js_view": "react",
+    "js_mvc": "ember"
   },
   {
     "name": "Twitter",
-    "front_backend": [
-      "scala",
-      "ruby on rails"
-    ],
-    "js_view": "reactjs",
+    "front_backend_new": "scala",
+    "front_backend_old": "ruby",
+    "js_mvc": "backbone",
+    "js_view": "react",
     "other": [
-      "mustache"
+      "mustache",
+      "spdy",
+      "flight.js"
     ]
   },
   {
     "name": "Amazon",
-    "front_backend": [
-      "ruby",
-      "java",
-      "nodejs"
-    ],
-    "js_mvc": "angular",
-    "js_view": "reactjs"
+    "front_backend_old": "java",
+    "js_mvc": "own",
+    "js_view": "own"
   },
   {
     "name": "Linkedin",
-    "front_backend": [
-      "scala",
-      "play",
-      "nodejs",
-      "java"
-    ],
+    "front_backend_new": "scala",
+    "front_backend_old": "java",
     "js_mvc": "ember",
-    "js_framework": "underscore",
-    "js_view": "dustjs",
-    "other": [
-      "YUI 2",
-      "backbone"
-    ]
+    "js_view": "dust"
   },
   {
     "name": "Facebook",
-    "front_backend": [
-      "php",
-      "hack"
-    ],
-    "js_view": "reactjs",
+    "front_backend_new": "hack",
+    "front_backend_old": "php",
+    "js_view": "react",
     "other": [
-      "flux",
       "spdy",
       "immutable-js",
       "fbml"
@@ -67,12 +44,8 @@
   },
   {
     "name": "Google",
-    "front_backend": [
-      "go",
-      "django",
-      "python",
-      "GWT"
-    ],
+    "front_backend_new": "go",
+    "front_backend_old": "python",
     "js_mvc": "angular",
     "js_lang": "dart",
     "other": [
@@ -81,108 +54,66 @@
   },
   {
     "name": "PayPal",
-    "front_backend": [
-      "python",
-      "nodejs"
-    ],
-    "js_view": "reactjs",
+    "front_backend_new": "node.js",
+    "front_backend_old": "python",
+    "js_view": "react",
     "js_mvc": "backbone",
     "other": [
-      "nemo.js",
-      "dustjs",
-      "jquery ui"
+      "dustjs"
     ]
   },
   {
     "name": "The Guardian",
-    "front_backend": [
-      "scala",
-      "play",
-      "java"
-    ],
-    "js_mvc": "ember",
-    "js_framework": "lodash",
-    "js_view": "-",
-    "other": [
-      "fast click"
-    ]
+    "front_backend_new": "scala",
+    "front_backend_old": "java",
+    "js_mvc": "angular"
   },
   {
     "name": "Airbnb",
-    "front_backend": [
-      "ruby on rails"
-    ],
+    "front_backend_new": "node.js",
+    "front_backend_old": "ruby",
     "js_mvc": "backbone",
     "js_view": "handlebars",
-    "js_framework": "underscore",
+    "js_lang": "coffeescript",
     "other": [
-      "moment.js",
-      "reactjs",
-      "jquery UI",
-      "bootstrap",
-      "flightjs",
-      "html5 boilerplate"
+      "react",
+      "flight.js"
     ]
   },
   {
     "name": "eBay",
-    "front_backend": [
-      "java",
-      "nodejs"
-    ],
-    "js_view": "reactjs"
+    "front_backend_new": "node.js",
+    "front_backend_old": "java",
+    "js_view": "react"
   },
   {
     "name": "Espn",
-    "front_backend": [
-      "ruby on rails"
-    ],
-    "js_mvc": "backbone",
-    "js_framework": "lodash"
+    "front_backend_old": "ruby",
+    "js_mvc": "backbone"
   },
   {
     "name": "Dropbox",
-    "front_backend": [
-      "python",
-      "go"
-    ],
+    "front_backend_new": "go",
+    "front_backend_old": "python",
     "js_lang": "coffeescript"
   },
   {
     "name": "New York Times",
-    "front_backend": [
-      "php",
-      "go",
-      "java"
-    ],
+    "front_backend_new": "go",
+    "front_backend_old": "php",
     "js_mvc": "backbone",
-    "js_view": "reactjs",
-    "js_framework": "underscore"
+    "js_view": "react"
   },
   {
     "name": "Huffington Post",
-    "front_backend": [
-      "scala",
-      "play",
-      "ruby on rails",
-      "php"
-    ],
-    "js_mvc": "angular",
-    "other": [
-      "backbone.js",
-      "jquery UI"
-    ]
+    "front_backend_new": "scala",
+    "front_backend_old": "php",
+    "js_mvc": "angular"
   },
   {
     "name": "Khan Academy",
-    "front_backend": [
-    ],
+    "front_backend_old": "python",
     "js_mvc": "backbone",
-    "js_view": "reactjs",
-    "js_framework": "underscore",
-    "other": [
-      "jQuery ui",
-      "flux"
-    ]
+    "js_view": "react"
   }
 ]

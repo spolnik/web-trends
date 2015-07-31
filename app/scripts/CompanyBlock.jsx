@@ -58,16 +58,11 @@ var CompanyBox = React.createClass({
     },
     getInitialState: function () {
         return {data: [{
-            "name": "Company Name",
-            "front_backend": [
-                "sample language"
-            ],
-            "js_mvc": "mvc javascript framework",
-            "js_framework": "javascript core framewrok",
-            "js_view": "javascript view / templating framework",
-            "other": [
-                "other libraries"
-            ]
+            "name": "Netflix",
+            "front_backend_new": "node.js",
+            "front_backend_old": "java",
+            "js_view": "react",
+            "js_mvc": "ember"
         }]};
     },
     componentDidMount: function () {
@@ -77,7 +72,7 @@ var CompanyBox = React.createClass({
         var companyNodes = this.state.data.map(function (company) {
 
             var companyWithDefaults = _.assign(
-                {'other': [], 'js_view': '-', 'js_framework': '-', 'js_mvc': '-', 'front_backend': []},
+                {'other': [], 'js_view': 'other', 'js_mvc': 'other', "front_backend_new": "-", "front_backend_old": "-"},
                 company
             );
 
@@ -110,47 +105,31 @@ var CompanyBox = React.createClass({
 
 var Company = React.createClass({
     render: function () {
-        var serverTechnologies = this.props.company.front_backend.map(function (technology) {
-            return (
-                <li>{technology}</li>
-            );
-        });
-
-        var otherTechnologies = this.props.company.other.map(function (technology) {
-            return (
-                <li>{technology}</li>
-            );
-        });
 
         return (
             <div className={"company element-item well col-md-3 company-" + this.props.color}>
                 <CompanyLogo name={this.props.company.name} />
-                <div className="frontendServer">
-                    <h4>Front end server</h4>
-                    <ul>
-                        {serverTechnologies}
-                    </ul>
-                </div>
-                <div className="mvcFramework">
-                    <h4>MVC Framework</h4>
-                    <span>{this.props.company.js_mvc}</span>
-                </div>
-                <div className="coreFramework">
-                    <h4>Utils</h4>
-                    <span>{this.props.company.js_framework}</span>
-                </div>
-                <div className="viewFramework">
-                    <h4>View / Templates</h4>
-                    <span>{this.props.company.js_view}</span>
-                </div>
-                <div className="other">
-                    <h4>Other</h4>
-                    <ul>
-                        {otherTechnologies}
-                    </ul>
-                </div>
+                <Technology name="View" value={this.props.company.js_view} />
+                <Technology name="MVC" value={this.props.company.js_mvc} />
+                <Technology name="Server&nbsp;New" value={this.props.company.front_backend_new} />
+                <Technology name="Server&nbsp;Old" value={this.props.company.front_backend_old} />
             </div>
         )
+    }
+});
+
+var Technology = React.createClass({
+    render: function () {
+        if (this.props.value)
+
+        return (
+            <div className="technology">
+                <div className="row">
+                    <span className="technology-name col-xs-6">{this.props.name}</span>
+                    <span className="technology-value col-xs-6">{this.props.value}</span>
+                </div>
+            </div>
+        );
     }
 });
 
@@ -164,9 +143,12 @@ var CompanyLogo = React.createClass({
                 <div className="stack-name">
                     <span>{this.props.name}</span>
                 </div>
-                <p><a href="#">
-                    <img src={"app/img/" + imgName + ".png"} alt={imgName} />
-                </a></p>
+                <div className="container">
+                    <p><a href="#">
+                        <img src={"app/img/" + imgName + ".png"} alt={imgName} />
+                    </a></p>
+                </div>
+
             </div>
         );
     }

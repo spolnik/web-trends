@@ -58,16 +58,11 @@ var CompanyBox = React.createClass({displayName: "CompanyBox",
     },
     getInitialState: function () {
         return {data: [{
-            "name": "Company Name",
-            "front_backend": [
-                "sample language"
-            ],
-            "js_mvc": "mvc javascript framework",
-            "js_framework": "javascript core framewrok",
-            "js_view": "javascript view / templating framework",
-            "other": [
-                "other libraries"
-            ]
+            "name": "Netflix",
+            "front_backend_new": "node.js",
+            "front_backend_old": "java",
+            "js_view": "react",
+            "js_mvc": "ember"
         }]};
     },
     componentDidMount: function () {
@@ -77,7 +72,7 @@ var CompanyBox = React.createClass({displayName: "CompanyBox",
         var companyNodes = this.state.data.map(function (company) {
 
             var companyWithDefaults = _.assign(
-                {'other': [], 'js_view': '-', 'js_framework': '-', 'js_mvc': '-', 'front_backend': []},
+                {'other': [], 'js_view': 'other', 'js_mvc': 'other', "front_backend_new": "-", "front_backend_old": "-"},
                 company
             );
 
@@ -110,47 +105,31 @@ var CompanyBox = React.createClass({displayName: "CompanyBox",
 
 var Company = React.createClass({displayName: "Company",
     render: function () {
-        var serverTechnologies = this.props.company.front_backend.map(function (technology) {
-            return (
-                React.createElement("li", null, technology)
-            );
-        });
-
-        var otherTechnologies = this.props.company.other.map(function (technology) {
-            return (
-                React.createElement("li", null, technology)
-            );
-        });
 
         return (
             React.createElement("div", {className: "company element-item well col-md-3 company-" + this.props.color}, 
                 React.createElement(CompanyLogo, {name: this.props.company.name}), 
-                React.createElement("div", {className: "frontendServer"}, 
-                    React.createElement("h4", null, "Front end server"), 
-                    React.createElement("ul", null, 
-                        serverTechnologies
-                    )
-                ), 
-                React.createElement("div", {className: "mvcFramework"}, 
-                    React.createElement("h4", null, "MVC Framework"), 
-                    React.createElement("span", null, this.props.company.js_mvc)
-                ), 
-                React.createElement("div", {className: "coreFramework"}, 
-                    React.createElement("h4", null, "Utils"), 
-                    React.createElement("span", null, this.props.company.js_framework)
-                ), 
-                React.createElement("div", {className: "viewFramework"}, 
-                    React.createElement("h4", null, "View / Templates"), 
-                    React.createElement("span", null, this.props.company.js_view)
-                ), 
-                React.createElement("div", {className: "other"}, 
-                    React.createElement("h4", null, "Other"), 
-                    React.createElement("ul", null, 
-                        otherTechnologies
-                    )
-                )
+                React.createElement(Technology, {name: "View", value: this.props.company.js_view}), 
+                React.createElement(Technology, {name: "MVC", value: this.props.company.js_mvc}), 
+                React.createElement(Technology, {name: "Server New", value: this.props.company.front_backend_new}), 
+                React.createElement(Technology, {name: "Server Old", value: this.props.company.front_backend_old})
             )
         )
+    }
+});
+
+var Technology = React.createClass({displayName: "Technology",
+    render: function () {
+        if (this.props.value)
+
+        return (
+            React.createElement("div", {className: "technology"}, 
+                React.createElement("div", {className: "row"}, 
+                    React.createElement("span", {className: "technology-name col-xs-6"}, this.props.name), 
+                    React.createElement("span", {className: "technology-value col-xs-6"}, this.props.value)
+                )
+            )
+        );
     }
 });
 
@@ -164,9 +143,12 @@ var CompanyLogo = React.createClass({displayName: "CompanyLogo",
                 React.createElement("div", {className: "stack-name"}, 
                     React.createElement("span", null, this.props.name)
                 ), 
-                React.createElement("p", null, React.createElement("a", {href: "#"}, 
-                    React.createElement("img", {src: "app/img/" + imgName + ".png", alt: imgName})
-                ))
+                React.createElement("div", {className: "container"}, 
+                    React.createElement("p", null, React.createElement("a", {href: "#"}, 
+                        React.createElement("img", {src: "app/img/" + imgName + ".png", alt: imgName})
+                    ))
+                )
+
             )
         );
     }

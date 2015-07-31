@@ -4,7 +4,7 @@ $(document).ready ->
     topSpacing: 0
 
   $(".filter").sticky
-    topSpacing: 55
+    topSpacing: 57
 
   $(window).load ->
     container = $('.grid')
