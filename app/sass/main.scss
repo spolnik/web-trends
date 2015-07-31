@@ -1,11 +1,31 @@
 @import "colors";
 
-.company {
+.well {
   margin: 10px;
 }
 
 .navbar {
   width: 100%;
+}
+
+body {
+  color: $navbar_text_color;
+}
+
+.company-green {
+  background: $company_green;
+}
+
+.company-blue {
+  background: $company_blue;
+}
+
+.company-yellow {
+  background: $company_yellow;
+}
+
+.company-violet {
+  background: $company_violet;
 }
 
 .navbar-default {
@@ -76,4 +96,120 @@ footer {
   -webkit-transition: opacity .2s cubic-bezier(0.23, 1, 0.32, 1);
   transition: opacity .2s cubic-bezier(0.23, 1, 0.32, 1);
   text-decoration: none;
+}
+
+.div-center {
+  display: flex;
+  display: -webkit-inline-block;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+@media (min-width: 992px) {
+  .companyName {
+    padding: 0
+  }
+
+  .companyName img {
+    display: block;
+    position: relative;
+    z-index: 5;
+    width: 108px;
+    height: 108px;
+    background-color: #fff;
+    border-radius: 6px;
+    margin: auto
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .companyName img {
+    display: block;
+    position: relative;
+    z-index: 5;
+    width: 96px;
+    height: 96px;
+    background-color: #fff;
+    border-radius: 6px;
+    margin: auto
+  }
+}
+
+@media (max-width: 767px) {
+  .companyName img {
+    display: block;
+    position: relative;
+    z-index: 5;
+    width: 60px;
+    height: 60px;
+    background-color: #fff;
+    border-radius: 6px;
+    margin: auto
+  }
+}
+
+@media (min-width: 992px) {
+  .service-name {
+    font-weight: bold;
+    line-height: 1.1;
+    font-size: 36px;
+    margin-bottom: 10px;
+    margin-top: 10px
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .service-name {
+    font-weight: bold;
+    line-height: 1.1;
+    font-size: 30px;
+    text-align: center;
+    margin-top: 10px
+  }
+}
+
+@media (max-width: 767px) {
+  .service-name {
+    font-weight: bold;
+    line-height: 1.1;
+    font-size: 20px;
+    text-align: center;
+    margin-top: 5px
+  }
+}
+
+@media (min-width: 992px) {
+  .stack-name {
+    font-weight: bold;
+    line-height: 1.1;
+    font-size: 36px;
+    margin-bottom: 10px;
+    text-align: center;
+    margin-top: 30px
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .stack-name {
+    font-weight: bold;
+    line-height: 1.1;
+    font-size: 30px;
+    text-align: center;
+    margin-top: 10px
+  }
+}
+
+@media (max-width: 767px) {
+  .stack-name {
+    font-weight: bold;
+    line-height: 1.1;
+    font-size: 20px;
+    text-align: center;
+    margin-top: 5px
+  }
 }

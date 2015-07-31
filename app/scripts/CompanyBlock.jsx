@@ -1,3 +1,31 @@
+var AppBox = React.createClass({
+    render: function () {
+        return (
+            <div className="container">
+                <div className="col-md-10">
+                    <CompanyBox url={this.props.url} />
+                </div>
+                <div className="col-md-2">
+                    <FilterBox />
+                </div>
+            </div>
+        )
+    }
+});
+
+var FilterBox = React.createClass({
+    render: function () {
+        return (
+            <div className="well filter">
+                <h2>Filters</h2>
+                A
+                B
+                C
+            </div>
+        );
+    }
+});
+
 var CompanyBox = React.createClass({
     loadDataFromServer: function () {
         $.ajax({
@@ -37,8 +65,22 @@ var CompanyBox = React.createClass({
                 company
             );
 
+            var color = "violet";
+
+            switch (company.js_mvc) {
+                case "ember":
+                    color = "yellow";
+                    break;
+                case "backbone":
+                    color = "blue";
+                    break;
+                case "angular":
+                    color = "green";
+                    break;
+            }
+
             return (
-                <Company company={companyWithDefaults} />
+                <Company company={companyWithDefaults} color={color} />
             );
         });
 
@@ -65,10 +107,8 @@ var Company = React.createClass({
         });
 
         return (
-            <div className="well col-md-3 company">
-                <div className="companyName">
-                    <h2>{this.props.company.name.toUpperCase()}</h2>
-                </div>
+            <div className={"company well col-md-3 company-" + this.props.color}>
+                <CompanyLogo name={this.props.company.name} />
                 <div className="frontendServer">
                     <h4>Front end server</h4>
                     <ul>
@@ -98,7 +138,25 @@ var Company = React.createClass({
     }
 });
 
+var CompanyLogo = React.createClass({
+    render: function () {
+
+        var imgName = this.props.name.replace(/ /g, "").toLowerCase();
+
+        return (
+            <div className="companyName div-center">
+                <div className="stack-name">
+                    <span>{this.props.name}</span>
+                </div>
+                <p><a href="#">
+                    <img src={"app/img/" + imgName + ".png"} alt={imgName} />
+                </a></p>
+            </div>
+        );
+    }
+});
+
 React.render(
-    <CompanyBox url="data.json" />,
+    <AppBox url="data.json" />,
     document.getElementById('content')
 );

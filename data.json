@@ -1,20 +1,42 @@
 [
   {
-    "name": "The Guardian",
+    "name": "Netflix",
     "front_backend": [
-      "scala",
-      "play",
+      "nodejs",
+      "python",
       "java"
     ],
+    "js_view": "reactjs",
     "js_mvc": "ember",
-    "js_framework": "lodash",
     "js_view": "-",
     "other": [
-      "fast click"
+      "d3",
+      "jquery ui"
     ]
   },
   {
-    "name": "linkedin",
+    "name": "Twitter",
+    "front_backend": [
+      "scala",
+      "ruby on rails"
+    ],
+    "js_view": "reactjs",
+    "other": [
+      "mustache"
+    ]
+  },
+  {
+    "name": "Amazon",
+    "front_backend": [
+      "ruby",
+      "java",
+      "nodejs"
+    ],
+    "js_mvc": "angular",
+    "js_view": "reactjs"
+  },
+  {
+    "name": "Linkedin",
     "front_backend": [
       "scala",
       "play",
@@ -30,68 +52,35 @@
     ]
   },
   {
-    "name": "netflix",
+    "name": "Facebook",
     "front_backend": [
-      "nodejs",
-      "python",
-      "java"
-    ],
-    "js_view": "reactjs",
-    "js_mvc": "ember.js",
-    "js_view": "-",
-    "other": [
-      "d3",
-      "jquery ui"
-    ]
-  },
-  {
-    "name": "twitter",
-    "front_backend": [
-      "scala",
-      "ruby",
-      "rails"
+      "php",
+      "hack"
     ],
     "js_view": "reactjs",
     "other": [
-      "mustache"
+      "flux",
+      "spdy",
+      "immutable-js",
+      "fbml"
     ]
   },
   {
-    "name": "facebook",
-    "front_backend": [
-      "php"
-    ],
-    "js_view": "reactjs",
-    "other": [
-      "flux"
-    ]
-  },
-  {
-    "name": "amazon",
-    "front_backend": [
-      "ruby",
-      "java",
-      "nodejs"
-    ],
-    "js_mvc": "angularjs",
-    "js_view": "reactjs"
-  },
-  {
-    "name": "google",
+    "name": "Google",
     "front_backend": [
       "go",
       "django",
       "python",
       "GWT"
     ],
-    "js_mvc": "angularjs",
+    "js_mvc": "angular",
     "js_lang": "dart",
     "other": [
       "spdy"
     ]
   },
   {
-    "name": "paypal",
+    "name": "PayPal",
     "front_backend": [
       "python",
       "nodejs"
@@ -105,18 +94,23 @@
     ]
   },
   {
-    "name": "aliexpress",
+    "name": "The Guardian",
     "front_backend": [
-      "ruby",
-      "rails"
+      "scala",
+      "play",
+      "java"
     ],
-    "js_view": "handlebars"
+    "js_mvc": "ember",
+    "js_framework": "lodash",
+    "js_view": "-",
+    "other": [
+      "fast click"
+    ]
   },
   {
-    "name": "airbnb",
+    "name": "Airbnb",
     "front_backend": [
-      "ruby",
-      "rails"
+      "ruby on rails"
     ],
     "js_mvc": "backbone",
     "js_view": "handlebars",
@@ -131,7 +125,7 @@
     ]
   },
   {
-    "name": "ebay",
+    "name": "eBay",
     "front_backend": [
       "java",
       "nodejs"
@@ -139,21 +133,20 @@
     "js_view": "reactjs"
   },
   {
-    "name": "dropbox",
+    "name": "Espn",
+    "front_backend": [
+      "ruby on rails"
+    ],
+    "js_mvc": "backbone",
+    "js_framework": "lodash"
+  },
+  {
+    "name": "Dropbox",
     "front_backend": [
       "python",
       "go"
     ],
     "js_lang": "coffeescript"
-  },
-  {
-    "name": "espn",
-    "front_backend": [
-      "ruby",
-      "rails"
-    ],
-    "js_mvc": "backbone",
-    "js_framework": "lodash"
   },
   {
     "name": "New York Times",
@@ -167,22 +160,21 @@
     "js_framework": "underscore"
   },
   {
-    "name": "huffington post",
+    "name": "Huffington Post",
     "front_backend": [
       "scala",
       "play",
-      "ruby",
-      "rails",
+      "ruby on rails",
       "php"
     ],
-    "js_mvc": "angular js",
+    "js_mvc": "angular",
     "other": [
       "backbone.js",
       "jquery UI"
     ]
   },
   {
-    "name": "khan academy",
+    "name": "Khan Academy",
     "front_backend": [
     ],
     "js_mvc": "backbone",
