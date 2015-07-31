@@ -15,15 +15,31 @@ var AppBox = React.createClass({displayName: "AppBox",
 
 var FilterBox = React.createClass({displayName: "FilterBox",
     render: function () {
+
         return (
             React.createElement("div", {className: "well filter"}, 
                 React.createElement("h2", null, "Filters"), 
-                "A" + ' ' +
-                "B" + ' ' +
-                "C"
+                React.createElement(Filter, {selector: "*", value: "all"}), 
+                React.createElement(Filter, {selector: ".company-yellow", value: "ember"}), 
+                React.createElement(Filter, {selector: ".company-blue", value: "backbone"}), 
+                React.createElement(Filter, {selector: ".company-green", value: "angular"})
             )
         );
     }
+});
+
+var Filter = React.createClass({displayName: "Filter",
+   render: function () {
+
+       return (
+            React.createElement("div", null, 
+                React.createElement("button", {className: "filterButton btn btn-default", 
+                        "data-filter": this.props.selector}, 
+                    this.props.value
+                )
+            )
+       );
+   }
 });
 
 var CompanyBox = React.createClass({displayName: "CompanyBox",
@@ -85,7 +101,7 @@ var CompanyBox = React.createClass({displayName: "CompanyBox",
         });
 
         return (
-            React.createElement("div", {className: "companyList"}, 
+            React.createElement("div", {className: "companyList grid"}, 
                 companyNodes
             )
         )
@@ -107,7 +123,7 @@ var Company = React.createClass({displayName: "Company",
         });
 
         return (
-            React.createElement("div", {className: "company well col-md-3 company-" + this.props.color}, 
+            React.createElement("div", {className: "company element-item well col-md-3 company-" + this.props.color}, 
                 React.createElement(CompanyLogo, {name: this.props.company.name}), 
                 React.createElement("div", {className: "frontendServer"}, 
                     React.createElement("h4", null, "Front end server"), 

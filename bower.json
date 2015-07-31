@@ -5,7 +5,7 @@
   "authors": [
     "Jacek Spolnik <jacek.spolnik@gmail.com>"
   ],
-  "license": "MIT",
+  "license": "GPLv3",
   "ignore": [
     "**/.*",
     "node_modules",
@@ -17,6 +17,7 @@
     "jquery-sticky": "~1.0.1",
     "bootstrap": "~3.3.5",
     "react": "~0.13.3",
-    "lodash": "~3.10.0"
+    "lodash": "~3.10.0",
+    "isotope": "~2.2.1"
   }
 }

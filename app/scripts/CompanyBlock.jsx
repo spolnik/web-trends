@@ -15,15 +15,31 @@ var AppBox = React.createClass({
 
 var FilterBox = React.createClass({
     render: function () {
+
         return (
             <div className="well filter">
                 <h2>Filters</h2>
-                A
-                B
-                C
+                <Filter selector='*' value='all' />
+                <Filter selector='.company-yellow' value='ember' />
+                <Filter selector='.company-blue' value='backbone' />
+                <Filter selector='.company-green' value='angular' />
             </div>
         );
     }
+});
+
+var Filter = React.createClass({
+   render: function () {
+
+       return (
+            <div>
+                <button className="filterButton btn btn-default"
+                        data-filter={this.props.selector} >
+                    {this.props.value}
+                </button>
+            </div>
+       );
+   }
 });
 
 var CompanyBox = React.createClass({
@@ -85,7 +101,7 @@ var CompanyBox = React.createClass({
         });
 
         return (
-            <div className="companyList">
+            <div className="companyList grid">
                 {companyNodes}
             </div>
         )
@@ -107,7 +123,7 @@ var Company = React.createClass({
         });
 
         return (
-            <div className={"company well col-md-3 company-" + this.props.color}>
+            <div className={"company element-item well col-md-3 company-" + this.props.color}>
                 <CompanyLogo name={this.props.company.name} />
                 <div className="frontendServer">
                     <h4>Front end server</h4>
