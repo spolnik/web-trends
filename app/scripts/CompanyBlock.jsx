@@ -157,7 +157,7 @@ var CompanyLogo = React.createClass({
                 </div>
                 <div className="div-center">
                     <p><a href="#">
-                        <img src={"app/img/" + imgName + ".png"} alt={imgName} />
+                        <img src={"dist/img/" + imgName + ".png"} alt={imgName} />
                     </a></p>
                 </div>
 
