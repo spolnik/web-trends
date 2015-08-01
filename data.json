@@ -24,7 +24,7 @@
     "front_backend_old": "java"
   },
   {
-    "name": "Linkedin",
+    "name": "LinkedIn",
     "front_backend_new": "scala",
     "front_backend_old": "java",
     "js_mvc": "ember",
@@ -87,7 +87,7 @@
     "js_view": "react"
   },
   {
-    "name": "Espn",
+    "name": "ESPN",
     "front_backend_old": "ruby",
     "js_mvc": "backbone"
   },
