@@ -1,0 +1,224 @@
+@import "colors";
+@import "fonts";
+
+html, body {
+  width: 100%;
+  height: 100%;
+  font-family: $source_sans_pro;
+  color: $text_color;
+}
+
+h1, h2, h3, h4 {
+  font-family: $oxygen;
+  font-weight: 700;
+}
+
+.well {
+  margin: 10px;
+}
+
+.navbar {
+  width: 100%;
+}
+
+.angular, .angular.other {
+  background: $company_green;
+}
+
+.backbone, .backbone.other {
+  background: $company_blue;
+}
+
+.ember {
+  background: $company_yellow;
+}
+
+.other {
+  background: $company_violet;
+}
+
+.navbar-default {
+  display: inline-block;
+  color: $text_color;
+  text-align: center;
+  text-transform: uppercase;
+  background: $navbar_background_color;
+  border: none;
+}
+
+.navbar-nav {
+  display: inline-block;
+  float: none;
+  padding: 0;
+  margin: 0 auto;
+  font-size: 1em;
+  font-weight: bold;
+  list-style: none;
+}
+
+.navbar-default .navbar-nav > li > a {
+  color: $text_color;
+}
+
+.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
+  background-color: transparent;
+}
+
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
+  background: none;
+}
+
+@media (min-width: 992px) {
+  .site-footer {
+    margin-top: 60px;
+  }
+}
+
+@media (min-width: 992px) {
+  .site-footer .nav-footer li, .site-footer h6 {
+    margin-bottom: 8px;
+  }
+}
+
+.site-footer, .site-footer a, .site-footer h6 {
+  line-height: 1.5;
+}
+
+.site-footer {
+  background-color: #243a54;
+  padding: 60px 0;
+  font-size: 16px;
+  color: #fff;
+}
+
+h6, .made-in-krk {
+  color: $navbar_background_color;
+}
+
+footer {
+  display: block;
+}
+
+.site-footer a {
+  border-bottom: none;
+  color: #fff;
+  -webkit-transition: opacity .2s cubic-bezier(0.23, 1, 0.32, 1);
+  transition: opacity .2s cubic-bezier(0.23, 1, 0.32, 1);
+  text-decoration: none;
+}
+
+.div-center {
+  display: flex;
+  display: -webkit-inline-block;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.companyName img {
+  display: block;
+  position: relative;
+  z-index: 5;
+  width: 60px;
+  height: 60px;
+  background-color: #fff;
+  border-radius: 6px;
+  margin: 2em auto;
+}
+
+.stack-name {
+  font-weight: bold;
+  line-height: 1.1;
+  font-size: 20px;
+  text-align: center;
+  margin-top: 5px
+}
+
+.technology {
+  text-align: center;
+  padding: 5px;
+  margin: 5px;
+}
+
+.technology-name {
+  border: 1px solid $text_color;
+  border-bottom-left-radius: 6px;
+  border-top-left-radius: 6px;
+  background-color: #fff;
+}
+
+.technology-value {
+  border: 1px solid $text_color;
+  border-bottom-right-radius: 6px;
+  border-top-right-radius: 6px;
+}
+
+.nav-stacked>li>a {
+  color: #9e9e9e;
+  padding: 0;
+  display: inline;
+  font-size: 18px;
+  text-align: right;
+}
+
+.nav-stacked li.active a, .nav-stacked li.active a:hover {
+  border-color: #686cf3;
+}
+
+.nav>li>a {
+  border-bottom: 2px solid transparent;
+  cursor: pointer;
+}
+
+.nav-stacked {
+  border-bottom: 0;
+}
+
+.nav>li.active>a, .nav>li.active>a:hover {
+  color: #243a54;
+  cursor: default;
+}
+
+.nav>li>a:hover {
+  border-color: #d8d8d8;
+  color: #9e9e9e;
+}
+
+.nav>li>a:hover, .nav>li>a:focus {
+  text-decoration: none;
+  background-color: transparent;
+}
+
+a {
+  border-bottom: 2px solid #d8d8d8;
+}
+
+.bar {
+  height: 5px;
+  margin: 10px auto;
+}
+
+.yellow {
+  background-color: $company_yellow;
+}
+
+.violet {
+  background-color: $company_violet;
+}
+
+.blue {
+  background-color: $company_blue;
+}
+
+.green {
+  background-color: $company_green;
+}
+
+.filter {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}

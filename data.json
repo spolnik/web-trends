@@ -1,0 +1,119 @@
+[
+  {
+    "name": "Netflix",
+    "front_backend_new": "nodejs",
+    "front_backend_old": "java",
+    "js_view": "react",
+    "js_mvc": "ember",
+    "js_lang": "babel"
+  },
+  {
+    "name": "Twitter",
+    "front_backend_new": "scala",
+    "front_backend_old": "ruby",
+    "js_mvc": "backbone",
+    "js_view": "mustache",
+    "other": [
+      "react",
+      "spdy",
+      "flight.js"
+    ]
+  },
+  {
+    "name": "Amazon",
+    "front_backend_old": "java"
+  },
+  {
+    "name": "Linkedin",
+    "front_backend_new": "scala",
+    "front_backend_old": "java",
+    "js_mvc": "ember",
+    "js_view": "dust"
+  },
+  {
+    "name": "Facebook",
+    "front_backend_new": "hack",
+    "front_backend_old": "php",
+    "js_view": "react",
+    "other": [
+      "spdy",
+      "immutable-js",
+      "fbml"
+    ]
+  },
+  {
+    "name": "Google",
+    "front_backend_new": "go",
+    "front_backend_old": "python",
+    "js_mvc": "angular",
+    "js_lang": "dart",
+    "other": [
+      "spdy"
+    ]
+  },
+  {
+    "name": "PayPal",
+    "front_backend_new": "nodejs",
+    "front_backend_old": "python",
+    "js_view": "react",
+    "js_mvc": "backbone",
+    "js_lang": "babel",
+    "other": [
+      "dustjs"
+    ]
+  },
+  {
+    "name": "The Guardian",
+    "front_backend_new": "scala",
+    "front_backend_old": "java",
+    "js_mvc": "angular"
+  },
+  {
+    "name": "Airbnb",
+    "front_backend_new": "nodejs",
+    "front_backend_old": "ruby",
+    "js_mvc": "backbone",
+    "js_view": "handlebars",
+    "js_lang": "coffeescript",
+    "other": [
+      "react",
+      "flight.js"
+    ]
+  },
+  {
+    "name": "eBay",
+    "front_backend_new": "nodejs",
+    "front_backend_old": "java",
+    "js_view": "react"
+  },
+  {
+    "name": "Espn",
+    "front_backend_old": "ruby",
+    "js_mvc": "backbone"
+  },
+  {
+    "name": "Dropbox",
+    "front_backend_new": "go",
+    "front_backend_old": "python",
+    "js_lang": "coffeescript"
+  },
+  {
+    "name": "New York Times",
+    "front_backend_new": "go",
+    "front_backend_old": "php",
+    "js_mvc": "backbone",
+    "js_view": "react"
+  },
+  {
+    "name": "Huffington Post",
+    "front_backend_new": "scala",
+    "front_backend_old": "php",
+    "js_mvc": "angular"
+  },
+  {
+    "name": "Khan Academy",
+    "front_backend_old": "python",
+    "js_mvc": "backbone",
+    "js_view": "react"
+  }
+]
