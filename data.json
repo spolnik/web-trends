@@ -4,7 +4,8 @@
     "front_backend_new": "nodejs",
     "front_backend_old": "java",
     "js_view": "react",
-    "js_mvc": "ember"
+    "js_mvc": "ember",
+    "js_lang": "babel"
   },
   {
     "name": "Twitter",
@@ -56,6 +57,7 @@
     "front_backend_old": "python",
     "js_view": "react",
     "js_mvc": "backbone",
+    "js_lang": "babel",
     "other": [
       "dustjs"
     ]
