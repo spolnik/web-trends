@@ -17,12 +17,35 @@ var FilterBox = React.createClass({displayName: "FilterBox",
     render: function () {
 
         return (
-            React.createElement("div", {className: "well filter"}, 
+            React.createElement("div", {className: "filter"}, 
                 React.createElement("h2", null, "Filters"), 
-                React.createElement(Filter, {selector: "*", value: "all"}), 
-                React.createElement(Filter, {selector: ".company-yellow", value: "ember"}), 
-                React.createElement(Filter, {selector: ".company-blue", value: "backbone"}), 
-                React.createElement(Filter, {selector: ".company-green", value: "angular"})
+                React.createElement("ul", {className: "nav nav-stacked"}, 
+                    React.createElement("li", {className: "active"}, React.createElement(Filter, {selector: "*", value: "all"})), 
+                    React.createElement("li", null, React.createElement(Filter, {selector: ".ember", value: "ember"})), 
+                    React.createElement("li", null, React.createElement(Filter, {selector: ".backbone", value: "backbone"})), 
+                    React.createElement("li", null, React.createElement(Filter, {selector: ".angular", value: "angular"}))
+                ), 
+                React.createElement("div", {className: "bar yellow"}), 
+                React.createElement("ul", {className: "nav nav-stacked"}, 
+                    React.createElement("li", null, React.createElement(Filter, {selector: ".scala", value: "scala"})), 
+                    React.createElement("li", null, React.createElement(Filter, {selector: ".java", value: "java"})), 
+                    React.createElement("li", null, React.createElement(Filter, {selector: ".nodejs", value: "nodejs"})), 
+                    React.createElement("li", null, React.createElement(Filter, {selector: ".ruby", value: "ruby"})), 
+                    React.createElement("li", null, React.createElement(Filter, {selector: ".go", value: "go"})), 
+                    React.createElement("li", null, React.createElement(Filter, {selector: ".python", value: "python"})), 
+                    React.createElement("li", null, React.createElement(Filter, {selector: ".php", value: "php"}))
+                ), 
+                React.createElement("div", {className: "bar blue"}), 
+                React.createElement("ul", {className: "nav nav-stacked"}, 
+                    React.createElement("li", null, React.createElement(Filter, {selector: ".react", value: "react"})), 
+                    React.createElement("li", null, React.createElement(Filter, {selector: ".dust", value: "dust"})), 
+                    React.createElement("li", null, React.createElement(Filter, {selector: ".handlebars", value: "handlebars"})), 
+                    React.createElement("li", null, React.createElement(Filter, {selector: ".mustache", value: "mustache"}))
+                ), 
+                React.createElement("div", {className: "bar violet"}), 
+                React.createElement("ul", {className: "nav nav-stacked"}, 
+                    React.createElement("li", null, React.createElement(Filter, {selector: ".other", value: "other"}))
+                )
             )
         );
     }
@@ -32,11 +55,8 @@ var Filter = React.createClass({displayName: "Filter",
    render: function () {
 
        return (
-            React.createElement("div", null, 
-                React.createElement("button", {className: "filterButton btn btn-default", 
-                        "data-filter": this.props.selector}, 
-                    this.props.value
-                )
+            React.createElement("a", {className: "filterButton", "data-filter": this.props.selector}, 
+                this.props.value
             )
        );
    }
@@ -76,22 +96,14 @@ var CompanyBox = React.createClass({displayName: "CompanyBox",
                 company
             );
 
-            var color = "violet";
+            var classes = [];
 
-            switch (company.js_mvc) {
-                case "ember":
-                    color = "yellow";
-                    break;
-                case "backbone":
-                    color = "blue";
-                    break;
-                case "angular":
-                    color = "green";
-                    break;
+            for (var prop in companyWithDefaults) {
+                classes.push(companyWithDefaults[prop]);
             }
 
             return (
-                React.createElement(Company, {company: companyWithDefaults, color: color})
+                React.createElement(Company, {company: companyWithDefaults, color: classes.join(' ')})
             );
         });
 

@@ -1,7 +1,7 @@
 [
   {
     "name": "Netflix",
-    "front_backend_new": "node.js",
+    "front_backend_new": "nodejs",
     "front_backend_old": "java",
     "js_view": "react",
     "js_mvc": "ember"
@@ -11,18 +11,16 @@
     "front_backend_new": "scala",
     "front_backend_old": "ruby",
     "js_mvc": "backbone",
-    "js_view": "react",
+    "js_view": "mustache",
     "other": [
-      "mustache",
+      "react",
       "spdy",
       "flight.js"
     ]
   },
   {
     "name": "Amazon",
-    "front_backend_old": "java",
-    "js_mvc": "own",
-    "js_view": "own"
+    "front_backend_old": "java"
   },
   {
     "name": "Linkedin",
@@ -54,7 +52,7 @@
   },
   {
     "name": "PayPal",
-    "front_backend_new": "node.js",
+    "front_backend_new": "nodejs",
     "front_backend_old": "python",
     "js_view": "react",
     "js_mvc": "backbone",
@@ -70,7 +68,7 @@
   },
   {
     "name": "Airbnb",
-    "front_backend_new": "node.js",
+    "front_backend_new": "nodejs",
     "front_backend_old": "ruby",
     "js_mvc": "backbone",
     "js_view": "handlebars",
@@ -82,7 +80,7 @@
   },
   {
     "name": "eBay",
-    "front_backend_new": "node.js",
+    "front_backend_new": "nodejs",
     "front_backend_old": "java",
     "js_view": "react"
   },

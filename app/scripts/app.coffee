@@ -3,9 +3,6 @@ $(document).ready ->
   $(".navbar").sticky
     topSpacing: 0
 
-  $(".filter").sticky
-    topSpacing: 57
-
   $(window).load ->
     container = $('.grid')
     container.isotope
@@ -16,7 +13,12 @@ $(document).ready ->
         easing: 'linear',
         queue: false
 
-  $('.filterButton').click ->
+  $('.filterButton').click (e) ->
+    e.preventDefault()
+
+    $('.nav li.active').removeClass 'active'
+    $(this).parent().addClass 'active'
+
     grid = $('.grid')
     selector = $(this).attr 'data-filter'
     grid.isotope

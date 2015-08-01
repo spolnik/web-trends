@@ -17,12 +17,35 @@ var FilterBox = React.createClass({
     render: function () {
 
         return (
-            <div className="well filter">
+            <div className="filter">
                 <h2>Filters</h2>
-                <Filter selector='*' value='all' />
-                <Filter selector='.company-yellow' value='ember' />
-                <Filter selector='.company-blue' value='backbone' />
-                <Filter selector='.company-green' value='angular' />
+                <ul className="nav nav-stacked">
+                    <li className="active"><Filter selector='*' value='all' /></li>
+                    <li><Filter selector='.ember' value='ember' /></li>
+                    <li><Filter selector='.backbone' value='backbone' /></li>
+                    <li><Filter selector='.angular' value='angular' /></li>
+                </ul>
+                <div className="bar yellow"></div>
+                <ul className="nav nav-stacked">
+                    <li><Filter selector='.scala' value='scala' /></li>
+                    <li><Filter selector='.java' value='java' /></li>
+                    <li><Filter selector='.nodejs' value='nodejs' /></li>
+                    <li><Filter selector='.ruby' value='ruby' /></li>
+                    <li><Filter selector='.go' value='go' /></li>
+                    <li><Filter selector='.python' value='python' /></li>
+                    <li><Filter selector='.php' value='php' /></li>
+                </ul>
+                <div className="bar blue"></div>
+                <ul className="nav nav-stacked">
+                    <li><Filter selector='.react' value='react' /></li>
+                    <li><Filter selector='.dust' value='dust' /></li>
+                    <li><Filter selector='.handlebars' value='handlebars' /></li>
+                    <li><Filter selector='.mustache' value='mustache' /></li>
+                </ul>
+                <div className="bar violet"></div>
+                <ul className="nav nav-stacked">
+                    <li><Filter selector='.other' value='other' /></li>
+                </ul>
             </div>
         );
     }
@@ -32,12 +55,9 @@ var Filter = React.createClass({
    render: function () {
 
        return (
-            <div>
-                <button className="filterButton btn btn-default"
-                        data-filter={this.props.selector} >
-                    {this.props.value}
-                </button>
-            </div>
+            <a className="filterButton" data-filter={this.props.selector} >
+                {this.props.value}
+            </a>
        );
    }
 });
@@ -76,22 +96,14 @@ var CompanyBox = React.createClass({
                 company
             );
 
-            var color = "violet";
+            var classes = [];
 
-            switch (company.js_mvc) {
-                case "ember":
-                    color = "yellow";
-                    break;
-                case "backbone":
-                    color = "blue";
-                    break;
-                case "angular":
-                    color = "green";
-                    break;
+            for (var prop in companyWithDefaults) {
+                classes.push(companyWithDefaults[prop]);
             }
 
             return (
-                <Company company={companyWithDefaults} color={color} />
+                <Company company={companyWithDefaults} color={classes.join(' ')} />
             );
         });
 
