@@ -103,7 +103,7 @@ var CompanyBox = React.createClass({
             }
 
             return (
-                <Company company={companyWithDefaults} color={classes.join(' ')} />
+                <Company company={companyWithDefaults} classes={classes.join(' ')} />
             );
         });
 
@@ -119,7 +119,7 @@ var Company = React.createClass({
     render: function () {
 
         return (
-            <div className={"company element-item well col-md-3 company-" + this.props.color}>
+            <div className={"company element-item well col-lg-3 col-md-4 col-sm-5 col-xs-10 " + this.props.classes}>
                 <CompanyLogo name={this.props.company.name} />
                 <Technology name="View" value={this.props.company.js_view} />
                 <Technology name="MVC" value={this.props.company.js_mvc} />
@@ -151,11 +151,11 @@ var CompanyLogo = React.createClass({
         var imgName = this.props.name.replace(/ /g, "").toLowerCase();
 
         return (
-            <div className="companyName div-center">
-                <div className="stack-name">
+            <div className="companyName">
+                <div className="stack-name div-center">
                     <span>{this.props.name}</span>
                 </div>
-                <div className="container">
+                <div className="div-center">
                     <p><a href="#">
                         <img src={"app/img/" + imgName + ".png"} alt={imgName} />
                     </a></p>

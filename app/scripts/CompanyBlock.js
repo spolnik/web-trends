@@ -103,7 +103,7 @@ var CompanyBox = React.createClass({displayName: "CompanyBox",
             }
 
             return (
-                React.createElement(Company, {company: companyWithDefaults, color: classes.join(' ')})
+                React.createElement(Company, {company: companyWithDefaults, classes: classes.join(' ')})
             );
         });
 
@@ -119,7 +119,7 @@ var Company = React.createClass({displayName: "Company",
     render: function () {
 
         return (
-            React.createElement("div", {className: "company element-item well col-md-3 company-" + this.props.color}, 
+            React.createElement("div", {className: "company element-item well col-lg-3 col-md-4 col-sm-5 col-xs-10 " + this.props.classes}, 
                 React.createElement(CompanyLogo, {name: this.props.company.name}), 
                 React.createElement(Technology, {name: "View", value: this.props.company.js_view}), 
                 React.createElement(Technology, {name: "MVC", value: this.props.company.js_mvc}), 
@@ -151,11 +151,11 @@ var CompanyLogo = React.createClass({displayName: "CompanyLogo",
         var imgName = this.props.name.replace(/ /g, "").toLowerCase();
 
         return (
-            React.createElement("div", {className: "companyName div-center"}, 
-                React.createElement("div", {className: "stack-name"}, 
+            React.createElement("div", {className: "companyName"}, 
+                React.createElement("div", {className: "stack-name div-center"}, 
                     React.createElement("span", null, this.props.name)
                 ), 
-                React.createElement("div", {className: "container"}, 
+                React.createElement("div", {className: "div-center"}, 
                     React.createElement("p", null, React.createElement("a", {href: "#"}, 
                         React.createElement("img", {src: "app/img/" + imgName + ".png", alt: imgName})
                     ))
