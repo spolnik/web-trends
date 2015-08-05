@@ -5,7 +5,8 @@
     "front_backend_old": "java",
     "js_view": "react",
     "js_mvc": "ember",
-    "js_lang": "babel"
+    "js_lang": "babel",
+    "url": "https://www.netflix.com"
   },
   {
     "name": "Twitter",
@@ -17,18 +18,34 @@
       "react",
       "spdy",
       "flight.js"
-    ]
+    ],
+    "url": "https://twitter.com/"
   },
   {
     "name": "Amazon",
-    "front_backend_old": "java"
+    "js_mvc": "ember",
+    "front_backend_new": "java",
+    "front_backend_old": "php",
+    "url": "https://amazon.com/"
   },
   {
     "name": "LinkedIn",
     "front_backend_new": "scala",
     "front_backend_old": "java",
     "js_mvc": "ember",
-    "js_view": "dust"
+    "js_view": "dust",
+    "url": "https://www.linkedin.com/"
+  },
+  {
+    "name": "Google",
+    "front_backend_new": "go",
+    "front_backend_old": "python",
+    "js_mvc": "angular",
+    "js_lang": "dart",
+    "other": [
+      "spdy"
+    ],
+    "url": "https://www.google.com/search/about/"
   },
   {
     "name": "Facebook",
@@ -39,17 +56,8 @@
       "spdy",
       "immutable-js",
       "fbml"
-    ]
-  },
-  {
-    "name": "Google",
-    "front_backend_new": "go",
-    "front_backend_old": "python",
-    "js_mvc": "angular",
-    "js_lang": "dart",
-    "other": [
-      "spdy"
-    ]
+    ],
+    "url": "https://www.facebook.com/"
   },
   {
     "name": "PayPal",
@@ -60,13 +68,15 @@
     "js_lang": "babel",
     "other": [
       "dustjs"
-    ]
+    ],
+    "url": "https://www.paypal.com"
   },
   {
     "name": "The Guardian",
     "front_backend_new": "scala",
     "front_backend_old": "java",
-    "js_mvc": "angular"
+    "js_mvc": "angular",
+    "url": "http://www.theguardian.com/"
   },
   {
     "name": "Airbnb",
@@ -78,42 +88,75 @@
     "other": [
       "react",
       "flight.js"
-    ]
+    ],
+    "url": "https://www.airbnb.com/"
   },
   {
     "name": "eBay",
     "front_backend_new": "nodejs",
     "front_backend_old": "java",
-    "js_view": "react"
+    "js_view": "react",
+    "url": "http://www.ebay.com/"
   },
   {
     "name": "ESPN",
     "front_backend_old": "ruby",
-    "js_mvc": "backbone"
+    "js_mvc": "backbone",
+    "url": "http://espn.go.com/"
   },
   {
     "name": "Dropbox",
     "front_backend_new": "go",
     "front_backend_old": "python",
-    "js_lang": "coffeescript"
+    "js_mvc": "backbone",
+    "js_lang": "coffeescript",
+    "url": "https://www.dropbox.com"
   },
   {
     "name": "New York Times",
     "front_backend_new": "go",
     "front_backend_old": "php",
     "js_mvc": "backbone",
-    "js_view": "react"
+    "js_view": "react",
+    "url": "http://www.nytimes.com/"
   },
   {
     "name": "Huffington Post",
     "front_backend_new": "scala",
     "front_backend_old": "php",
-    "js_mvc": "angular"
+    "js_mvc": "angular",
+    "url": "http://www.huffingtonpost.com/"
   },
   {
     "name": "Khan Academy",
     "front_backend_old": "python",
     "js_mvc": "backbone",
-    "js_view": "react"
+    "js_view": "react",
+    "url": "https://www.khanacademy.org/"
+  },
+  {
+    "name": "Base",
+    "front_backend_new": "java",
+    "front_backend_old": "ruby",
+    "js_mvc": "backbone",
+    "js_view": "handlebars",
+    "js_lang": "coffeescript",
+    "url": "https://getbase.com/"
+  },
+  {
+    "name": "Uber",
+    "front_backend_new": "nodejs",
+    "front_backend_old": "python",
+    "js_mvc": "backbone",
+    "js_lang": "coffeescript",
+    "url": "https://uber.com/"
+  },
+  {
+    "name": "AliExpress",
+    "front_backend_new": "java",
+    "front_backend_old": "php",
+    "js_view": "handlebars",
+    "js_lang": "coffeescript",
+    "url": "http://aliexpress.com/"
   }
 ]

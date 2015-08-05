@@ -22,14 +22,14 @@ h1, h2, h3, h4 {
 }
 
 .angular, .angular.other {
-  background: $company_green;
-}
-
-.backbone, .backbone.other {
   background: $company_blue;
 }
 
-.ember {
+.backbone, .backbone.other {
+  background: $company_green;
+}
+
+.ember, .ember.other {
   background: $company_yellow;
 }
 
@@ -126,7 +126,7 @@ footer {
   width: 60px;
   height: 60px;
   background-color: #fff;
-  border-radius: 6px;
+  border-radius: 8px;
   margin: 2em auto;
 }
 

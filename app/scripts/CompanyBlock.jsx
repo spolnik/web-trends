@@ -69,7 +69,7 @@ var CompanyBox = React.createClass({
             dataType: 'json',
             cache: true,
             success: function (data) {
-                this.setState({data: data});
+                this.setState({data: _.shuffle(data)});
             }.bind(this),
             error: function (xhr, status, err) {
                 console.error(this.props.url, status, err.toString());
@@ -82,7 +82,8 @@ var CompanyBox = React.createClass({
             "front_backend_new": "node.js",
             "front_backend_old": "java",
             "js_view": "react",
-            "js_mvc": "ember"
+            "js_mvc": "ember",
+            "url": "https://www.netflix.com"
         }]};
     },
     componentDidMount: function () {
@@ -120,7 +121,7 @@ var Company = React.createClass({
 
         return (
             <div className={"company element-item well col-lg-3 col-md-4 col-sm-5 col-xs-10 " + this.props.classes}>
-                <CompanyLogo name={this.props.company.name} />
+                <CompanyLogo name={this.props.company.name} url={this.props.company.url} />
                 <Technology name="View" value={this.props.company.js_view} />
                 <Technology name="MVC" value={this.props.company.js_mvc} />
                 <Technology name="Server&nbsp;New" value={this.props.company.front_backend_new} />
@@ -156,7 +157,7 @@ var CompanyLogo = React.createClass({
                     <span>{this.props.name}</span>
                 </div>
                 <div className="div-center">
-                    <p><a href="#">
+                    <p><a href={this.props.url} target="_blank">
                         <img src={"dist/img/" + imgName + ".png"} alt={imgName} />
                     </a></p>
                 </div>
